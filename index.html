@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Car AI</title>
+
+  <style>
+    .button {
+      border-radius: 10px;
+      cursor: pointer;
+      color: black;
+      font-weight: bold;
+      font-family: sans-serif;
+      width: auto;
+      height: 50px;
+      font-size: 15px;
+      border: none;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #808080;
+    }
+
+    .button:focus {
+      outline: 0;
+    }
+
+    #resetBrain {
+      background-color: #DC143C;
+      color: white;
+    }
+
+    #resetBrain:hover {
+      background-color: #B70000;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="speed" style="font-family: sans-serif; font-weight: bold; font-size: 20px;">Speed: 1</p>
+  <p id="difficulty" style="font-family: sans-serif; font-weight: bold; font-size: 20px;">Difficulty: 3</p>
+  <p id="pathWidth" style="font-family: sans-serif; font-weight: bold; font-size: 20px;">Path Width: 50</p>
+  <input type="button" value="Reset Generation" name="reset" class="button" id="reset" onclick="reset()"></input>
+  <input type="button" value="Reset Brains" name="resetBrain" class="button" id="resetBrain" onclick="resetBrain()"></input>
+  <input type="button" value="Visualize" name="visual" class="button" id="visual" onclick="visualize()"></input>
+  <input type="button" value="Sensors" name="blind" class="button" id="blind" onclick="blind()"></input>
+
+  <script src="script/p5.js"></script>
+  <script src="script/p5.dom.js"></script>
+  <script src="script/tf.min.js"></script>
+
+  <script src="script/boundary.js"></script>
+  <script src="script/ray.js"></script>
+  <script src="script/car.js"></script>
+  <script src="script/nn.js"></script>
+  <script src="script/ga.js"></script>
+
+  <script src="script/sketch.js"></script>
+</body>
+
+</html>
